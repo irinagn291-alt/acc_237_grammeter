@@ -1,0 +1,14 @@
+GramMeter is a personal food log. Search the Catalog or drop a barcode onto the Weigh readout, tare the vessel, and record net grams against daily energy and macro gauges.
+
+• Today shows energy, protein, carbs and fat versus Targets, and Stations: Weigh-In One, Weigh-In Two, Weigh-In Three and Tare
+• Weigh reads a live barcode or a Manual barcode, then computes net grams from Tare (vessel) and Gross in g, oz or ml
+• Portion presets store Slice, Cup and Tbsp values per product
+• Assign weigh-in picks a Station and Eaten today or a Future day. Tare is eaten-only and remaps to Weigh-In Three when planning ahead
+• Catalog searches Open Food Facts by name. A bundled local shelf fills in if the network is quiet
+• Log lists eaten weigh-ins by Station, with Previous day and Next day. A weigh-in can be deleted
+• Plan lists staged weigh-ins for the Next 14 days. Eat converts a planned item to eaten today
+• Reserved holds products you intend to buy. Reserve from Weigh; Weigh on a reserved row loads it on the scale
+• Targets edits Energy kcal, Protein g, Carbs g and Fat g. Skip on first launch writes factory gauges
+• Contact on Targets opens the support page
+
+Resolved products are cached on the device. Nutrition data comes from Open Food Facts, a public database. GramMeter is a personal food log, not medical advice.

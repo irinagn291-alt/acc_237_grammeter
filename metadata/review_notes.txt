@@ -1,0 +1,13 @@
+The only sensitive permission is the camera. It is requested the first time Weigh opens and live barcode capture starts. The system prompt uses this exact usage description: GramMeter reads barcodes so the scale knows what it is weighing. If access is denied or restricted, Weigh explains the state and offers Open Settings. A Manual barcode field and Resolve code remain available so the app works without the camera. No other permission usage-description keys are present.
+
+There is no login, no in-app purchase, no user-generated content, no account deletion flow, and no App Tracking Transparency prompt.
+
+GramMeter is a personal food log for people who want to weigh a serving and record energy and macros. It is for anyone tracking packaged food by grams. It is not medical advice.
+
+No credentials or demo account are needed. On a cold launch the reviewer sees four onboarding pages titled Weigh it properly, Catalog and live scan, Set the daily gauges, and Precision first. Tap Skip to accept factory gauges, or enter Energy kcal, Protein g, Carbs g and Fat g and tap Write gauges. That opens Today. From Today, tap Weigh to scan a barcode or type a Manual barcode and tap Resolve code. After a specimen appears, enter Portion or Tare (vessel) and Gross, tap Assign weigh-in, choose a Station, leave Eaten today on, and tap Commit weigh-in. Tap Catalog and type in Search the catalog to look up a product by name; selecting a row opens Weigh. Tap Log to browse eaten weigh-ins by day, Plan to see the Next 14 days, Reserved for saved products, and Targets to edit gauges, Re-run onboarding, Reset all data, or Contact. A bundled shelf barcode that resolves offline is 0722252100450 (Calibrated Protein Bar).
+
+The app contacts Open Food Facts at https://world.openfoodfacts.org/api/v2/search and https://world.openfoodfacts.org/api/v2/product/{code}.json to search and resolve products. Product thumbnails may load from the image URL returned by that database. Contact on Targets opens https://grammeter.pro/contact-us in the system browser. Weigh-ins, Targets, Reserved items, portion presets and cached specimens stay in a local binary archive on the device. A six-product local shelf is bundled for offline fallback.
+
+Behaviour does not differ by storefront or country. Day boundaries follow the device calendar and time zone. Numbers use the device locale.
+
+No licence or regulated-industry paperwork applies. GramMeter is a personal food log, not a medical device, and does not provide medical advice. Nutrition figures are credited to Open Food Facts, a public database.

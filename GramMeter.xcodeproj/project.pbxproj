@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00922AE84E707384F7187443 /* ScaleUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9CE8E68B50B84E840B6688 /* ScaleUpdate.swift */; };
+		0DC6B26BAB50DD1E13729100 /* GaugeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A48C6DF3E1D052BF902B7 /* GaugeType.swift */; };
+		23849F985897E77DC0729679 /* ScaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45500AAF5BEDD15F2512029B /* ScaleModel.swift */; };
+		25DCF221E190D8DFF5B56858 /* GaugeMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1AE4FD1BFCA2168C74176 /* GaugeMotion.swift */; };
+		3117F5855DEF83D4DD4125D2 /* WishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EC748720D5A9AF8A60CC8 /* WishModel.swift */; };
+		314687FFC14B4A3ACC35FD4E /* HubUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B183A63D02F67905EF574 /* HubUpdate.swift */; };
+		3600F572C1C508BF6F61B461 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679299970D40FAD370F86376 /* OnboardingModel.swift */; };
+		3AE1C8B83EB9D79158E7C662 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F44272800157FEEF125FD0 /* CatalogModel.swift */; };
+		42BFCD56F6FE5228CCC156D3 /* WishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FF19B956F2DE1B405E4B1 /* WishView.swift */; };
+		447C3768AC1B4DC61311F20D /* TargetsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5DD611F5384CFB183C0BB /* TargetsUpdate.swift */; };
+		4C2F89DFEFC23427C222773D /* TargetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A5E315603F5FBEE003E3F /* TargetsModel.swift */; };
+		56CD717CBF7E4D24849B907B /* WishMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F0D5068F3FBF8FE3BC13A /* WishMsg.swift */; };
+		5BEE9D96DF06F82566F1021C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A0931F8D77C640B1053457 /* Assets.xcassets */; };
+		5C466590C34BAC826D558693 /* ScaleShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6D50A03EBD1C56CE76BBEA30 /* ScaleShaders.metal */; };
+		65F821B2F6D05E5D9773DC06 /* TargetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE160784B749B89BDD294B3 /* TargetsView.swift */; };
+		69B5FEBD3D7592A4567E8A54 /* PlanUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A143952742754F7A8E786D82 /* PlanUpdate.swift */; };
+		69DE361F11341FE827D04A60 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF876E2040B761D7072BB718 /* PlanModel.swift */; };
+		7014E74A993F86EFD6FC7A67 /* LedgerDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D7D52A283146E48A858EFC /* LedgerDisk.swift */; };
+		73D913B35C0F71C220BA7432 /* LogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0866875D96FA7F51F44FA689 /* LogView.swift */; };
+		74354B7E7D4E390AC47DCB7B /* WeighSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B99FFB9F3791CD12F8C2335 /* WeighSlot.swift */; };
+		74FD39526327FE69AC784DF3 /* DomainRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D43E39CF2A9CB5D2562BF /* DomainRecords.swift */; };
+		79B953BD8D7777D4413EF192 /* ReadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF99CC78D42DABAF7635B94 /* ReadoutView.swift */; };
+		7AE125801417CCAB451FC9C8 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260BA4AB27A7B5F0D0ADE97 /* CatalogView.swift */; };
+		7B4C1B3377E542B667950B84 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B7CCC90926AFEF314D617 /* ScaleView.swift */; };
+		7B6BE0C451D08FBB27CB9771 /* CatalogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254E02A758B550DD2371E94C /* CatalogClient.swift */; };
+		7BF51DF672E93970D87668BE /* BarcodeNormalizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8897B57B415DC3E84382D0 /* BarcodeNormalizer.swift */; };
+		7BF7A711398DFAC832110323 /* WeighRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44937BC6BE677C231AEC8D /* WeighRuntime.swift */; };
+		80A86AF692EC0410B9BD86FC /* HubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A0BCAABF698125638A2FCFC /* HubModel.swift */; };
+		889430DE756F970B83CC2721 /* AppProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = B782E1E9C58105C0E92D2C63 /* AppProgram.swift */; };
+		8A59497F380216B20AA3EDFA /* DayKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124BB041A273B2F0C0A40568 /* DayKey.swift */; };
+		8EC72FE0771A8BCCEACEB3F3 /* MassConvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5E6F5CE5F306D3D4C61730 /* MassConvert.swift */; };
+		945CAA1E616E13B248CAD79C /* WishUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D821E3A9C3676C3C5380CAC /* WishUpdate.swift */; };
+		95F87795FB1F4FDFE831388D /* CalibrationCmd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77089BE5545A748496C253BA /* CalibrationCmd.swift */; };
+		99A7CE6A253E6C7345E88B9F /* GaugePalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7537D65FFE21AE00BD7C50FC /* GaugePalette.swift */; };
+		9D7B3098A36DCE0F064C663A /* LiveScanSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E34A25F6549704B18536DC /* LiveScanSession.swift */; };
+		9ED01D6679886CB2682C1B8B /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21102DA5C5C33BB00281B4C2 /* LogModel.swift */; };
+		A07FDF723E2B1C63B995BEF4 /* GramMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED7BF3B6FD4D24658035B7 /* GramMeterTests.swift */; };
+		A1DCB6B270FE753D4F259895 /* LogUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63033F472320C2BCD07C63D /* LogUpdate.swift */; };
+		A56A863491BDA8C90962AB57 /* PortionMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49771485B335494B1AC71ED7 /* PortionMath.swift */; };
+		A8A61C372D19FEE5BE54B7F7 /* GramMeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85446A6C5D7ED59885D72724 /* GramMeterApp.swift */; };
+		B11259A96C69C205FBA2662F /* CatalogUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB784F503907017F485E308 /* CatalogUpdate.swift */; };
+		B3A012F7EC73A6CC4F6DDD21 /* OnboardingMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420AD2315C327BFFA11FB9B /* OnboardingMsg.swift */; };
+		B6989FC4241F142EB4CE37A6 /* DemoShelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C56BA181853E71C1522C34 /* DemoShelf.swift */; };
+		B70937B02BFBA81F5E3449BC /* TargetsMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79016F86A94788E40B0D2E93 /* TargetsMsg.swift */; };
+		BB0F1162392099D540F4D88A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 2A7AC32C8F9096B96C725D3E /* PrivacyInfo.xcprivacy */; };
+		BC7C0F5CDC5381A82D3E0401 /* BinaryArchiveCodec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A583A883BE3DFFC34D810C /* BinaryArchiveCodec.swift */; };
+		BFB98F8A3DE0CBFCE6425BF4 /* OnboardingUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8D921BDE838A6FBE480B63 /* OnboardingUpdate.swift */; };
+		C79FDA6715099645D13FB5AE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE03B3F6FA5288168DEC41 /* OnboardingView.swift */; };
+		E4F779FEFBDCE8FD945FE469 /* ScaleMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89461EFB8A75ACD0D7A6151 /* ScaleMsg.swift */; };
+		E59C2F8FD46565AB3FF6954D /* LogMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4440B8DE7C98F3E1CEED41 /* LogMsg.swift */; };
+		E979E3347C9AB956CABD943A /* PlanMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6A66E49742097CAAAD21F3 /* PlanMsg.swift */; };
+		EBA12B474395A18FC6013046 /* CatalogMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C4B7DDC50A14FE64A1C050 /* CatalogMsg.swift */; };
+		F270264711DE9515747F5B1C /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61AE559C918BC62FD383C72 /* PlanView.swift */; };
+		F9306F1D09B1BE42006EE00F /* HubMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAF80E5B800401C02FC429D /* HubMsg.swift */; };
+		FB0E77D521CBBF0423891185 /* HubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD4309BEBB243F82D913FCC /* HubView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A3994AB9ADE75CD289BA8F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2E06DC0A3B5D22A29B484C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D14087A12C6F5605DB0D5AF3;
+			remoteInfo = GramMeter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02A583A883BE3DFFC34D810C /* BinaryArchiveCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryArchiveCodec.swift; sourceTree = "<group>"; };
+		049F0D5068F3FBF8FE3BC13A /* WishMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishMsg.swift; sourceTree = "<group>"; };
+		0866875D96FA7F51F44FA689 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		124BB041A273B2F0C0A40568 /* DayKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayKey.swift; sourceTree = "<group>"; };
+		1BA1AE4FD1BFCA2168C74176 /* GaugeMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeMotion.swift; sourceTree = "<group>"; };
+		1D821E3A9C3676C3C5380CAC /* WishUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishUpdate.swift; sourceTree = "<group>"; };
+		1FE160784B749B89BDD294B3 /* TargetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsView.swift; sourceTree = "<group>"; };
+		21102DA5C5C33BB00281B4C2 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
+		254E02A758B550DD2371E94C /* CatalogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogClient.swift; sourceTree = "<group>"; };
+		2A7AC32C8F9096B96C725D3E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2A9CE8E68B50B84E840B6688 /* ScaleUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleUpdate.swift; sourceTree = "<group>"; };
+		2D4440B8DE7C98F3E1CEED41 /* LogMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMsg.swift; sourceTree = "<group>"; };
+		35A0931F8D77C640B1053457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A8A5E315603F5FBEE003E3F /* TargetsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsModel.swift; sourceTree = "<group>"; };
+		42BE03B3F6FA5288168DEC41 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		42F44272800157FEEF125FD0 /* CatalogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogModel.swift; sourceTree = "<group>"; };
+		45500AAF5BEDD15F2512029B /* ScaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleModel.swift; sourceTree = "<group>"; };
+		49771485B335494B1AC71ED7 /* PortionMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortionMath.swift; sourceTree = "<group>"; };
+		4B99FFB9F3791CD12F8C2335 /* WeighSlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighSlot.swift; sourceTree = "<group>"; };
+		4D1EC748720D5A9AF8A60CC8 /* WishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishModel.swift; sourceTree = "<group>"; };
+		4D44937BC6BE677C231AEC8D /* WeighRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighRuntime.swift; sourceTree = "<group>"; };
+		4D6A66E49742097CAAAD21F3 /* PlanMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMsg.swift; sourceTree = "<group>"; };
+		679299970D40FAD370F86376 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		6D50A03EBD1C56CE76BBEA30 /* ScaleShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ScaleShaders.metal; sourceTree = "<group>"; };
+		6EB784F503907017F485E308 /* CatalogUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUpdate.swift; sourceTree = "<group>"; };
+		7537D65FFE21AE00BD7C50FC /* GaugePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugePalette.swift; sourceTree = "<group>"; };
+		75C56BA181853E71C1522C34 /* DemoShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoShelf.swift; sourceTree = "<group>"; };
+		77089BE5545A748496C253BA /* CalibrationCmd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalibrationCmd.swift; sourceTree = "<group>"; };
+		79016F86A94788E40B0D2E93 /* TargetsMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsMsg.swift; sourceTree = "<group>"; };
+		831B183A63D02F67905EF574 /* HubUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubUpdate.swift; sourceTree = "<group>"; };
+		8420AD2315C327BFFA11FB9B /* OnboardingMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingMsg.swift; sourceTree = "<group>"; };
+		85446A6C5D7ED59885D72724 /* GramMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramMeterApp.swift; sourceTree = "<group>"; };
+		8C8D921BDE838A6FBE480B63 /* OnboardingUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUpdate.swift; sourceTree = "<group>"; };
+		90E34A25F6549704B18536DC /* LiveScanSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScanSession.swift; sourceTree = "<group>"; };
+		9A0BCAABF698125638A2FCFC /* HubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubModel.swift; sourceTree = "<group>"; };
+		9C3D43E39CF2A9CB5D2562BF /* DomainRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainRecords.swift; sourceTree = "<group>"; };
+		9CBDB9B0797B920E62B488E4 /* GramMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GramMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CBCE715575C2D8ACBACC03 /* GramMeter.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GramMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A143952742754F7A8E786D82 /* PlanUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanUpdate.swift; sourceTree = "<group>"; };
+		AEAF80E5B800401C02FC429D /* HubMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubMsg.swift; sourceTree = "<group>"; };
+		AF8897B57B415DC3E84382D0 /* BarcodeNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeNormalizer.swift; sourceTree = "<group>"; };
+		B61AE559C918BC62FD383C72 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		B782E1E9C58105C0E92D2C63 /* AppProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProgram.swift; sourceTree = "<group>"; };
+		B89461EFB8A75ACD0D7A6151 /* ScaleMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleMsg.swift; sourceTree = "<group>"; };
+		BF876E2040B761D7072BB718 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
+		C260BA4AB27A7B5F0D0ADE97 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		D0ED7BF3B6FD4D24658035B7 /* GramMeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramMeterTests.swift; sourceTree = "<group>"; };
+		D2D7D52A283146E48A858EFC /* LedgerDisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerDisk.swift; sourceTree = "<group>"; };
+		D64A48C6DF3E1D052BF902B7 /* GaugeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeType.swift; sourceTree = "<group>"; };
+		DAD4309BEBB243F82D913FCC /* HubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubView.swift; sourceTree = "<group>"; };
+		E0F5DD611F5384CFB183C0BB /* TargetsUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsUpdate.swift; sourceTree = "<group>"; };
+		E1C4B7DDC50A14FE64A1C050 /* CatalogMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogMsg.swift; sourceTree = "<group>"; };
+		EB5E6F5CE5F306D3D4C61730 /* MassConvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassConvert.swift; sourceTree = "<group>"; };
+		EDF99CC78D42DABAF7635B94 /* ReadoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadoutView.swift; sourceTree = "<group>"; };
+		EF4B7CCC90926AFEF314D617 /* ScaleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleView.swift; sourceTree = "<group>"; };
+		F63033F472320C2BCD07C63D /* LogUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUpdate.swift; sourceTree = "<group>"; };
+		FE9FF19B956F2DE1B405E4B1 /* WishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0008EEE839B68B54738093C3 /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				1BA1AE4FD1BFCA2168C74176 /* GaugeMotion.swift */,
+				7537D65FFE21AE00BD7C50FC /* GaugePalette.swift */,
+				D64A48C6DF3E1D052BF902B7 /* GaugeType.swift */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		19DEAFB84298653E7799276B /* GramMeter */ = {
+			isa = PBXGroup;
+			children = (
+				35A0931F8D77C640B1053457 /* Assets.xcassets */,
+				85446A6C5D7ED59885D72724 /* GramMeterApp.swift */,
+				2A7AC32C8F9096B96C725D3E /* PrivacyInfo.xcprivacy */,
+				0008EEE839B68B54738093C3 /* Design */,
+				CD82121473B471C677A351E7 /* Programs */,
+				C437138360295CE8C2C18D08 /* Runtime */,
+				F37426F3298C39B5E2C6359C /* Shaders */,
+			);
+			path = GramMeter;
+			sourceTree = "<group>";
+		};
+		2DD3B5B00D7494F1E4C36426 /* Wish */ = {
+			isa = PBXGroup;
+			children = (
+				4D1EC748720D5A9AF8A60CC8 /* WishModel.swift */,
+				049F0D5068F3FBF8FE3BC13A /* WishMsg.swift */,
+				1D821E3A9C3676C3C5380CAC /* WishUpdate.swift */,
+				FE9FF19B956F2DE1B405E4B1 /* WishView.swift */,
+			);
+			path = Wish;
+			sourceTree = "<group>";
+		};
+		41A2AFA399A49773C04E50AE /* Targets */ = {
+			isa = PBXGroup;
+			children = (
+				3A8A5E315603F5FBEE003E3F /* TargetsModel.swift */,
+				79016F86A94788E40B0D2E93 /* TargetsMsg.swift */,
+				E0F5DD611F5384CFB183C0BB /* TargetsUpdate.swift */,
+				1FE160784B749B89BDD294B3 /* TargetsView.swift */,
+			);
+			path = Targets;
+			sourceTree = "<group>";
+		};
+		5BA0E796D5573ED16DAFBB96 /* Hub */ = {
+			isa = PBXGroup;
+			children = (
+				9A0BCAABF698125638A2FCFC /* HubModel.swift */,
+				AEAF80E5B800401C02FC429D /* HubMsg.swift */,
+				831B183A63D02F67905EF574 /* HubUpdate.swift */,
+				DAD4309BEBB243F82D913FCC /* HubView.swift */,
+			);
+			path = Hub;
+			sourceTree = "<group>";
+		};
+		60FBFF03B36D8CC351B268BD /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				21102DA5C5C33BB00281B4C2 /* LogModel.swift */,
+				2D4440B8DE7C98F3E1CEED41 /* LogMsg.swift */,
+				F63033F472320C2BCD07C63D /* LogUpdate.swift */,
+				0866875D96FA7F51F44FA689 /* LogView.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		75E7E0C40047EEE772DE8392 = {
+			isa = PBXGroup;
+			children = (
+				19DEAFB84298653E7799276B /* GramMeter */,
+				8986E6B253D80F79BC34C3CB /* GramMeterTests */,
+				F86167A6C6A0F163A008E5DD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		886B5469A12620B9B2728B1E /* Catalog */ = {
+			isa = PBXGroup;
+			children = (
+				42F44272800157FEEF125FD0 /* CatalogModel.swift */,
+				E1C4B7DDC50A14FE64A1C050 /* CatalogMsg.swift */,
+				6EB784F503907017F485E308 /* CatalogUpdate.swift */,
+				C260BA4AB27A7B5F0D0ADE97 /* CatalogView.swift */,
+			);
+			path = Catalog;
+			sourceTree = "<group>";
+		};
+		8986E6B253D80F79BC34C3CB /* GramMeterTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0ED7BF3B6FD4D24658035B7 /* GramMeterTests.swift */,
+			);
+			path = GramMeterTests;
+			sourceTree = "<group>";
+		};
+		8F0DC68D31BEEE4220437A2B /* Scale */ = {
+			isa = PBXGroup;
+			children = (
+				EDF99CC78D42DABAF7635B94 /* ReadoutView.swift */,
+				45500AAF5BEDD15F2512029B /* ScaleModel.swift */,
+				B89461EFB8A75ACD0D7A6151 /* ScaleMsg.swift */,
+				2A9CE8E68B50B84E840B6688 /* ScaleUpdate.swift */,
+				EF4B7CCC90926AFEF314D617 /* ScaleView.swift */,
+			);
+			path = Scale;
+			sourceTree = "<group>";
+		};
+		90AE33CF16B45FD719319781 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				679299970D40FAD370F86376 /* OnboardingModel.swift */,
+				8420AD2315C327BFFA11FB9B /* OnboardingMsg.swift */,
+				8C8D921BDE838A6FBE480B63 /* OnboardingUpdate.swift */,
+				42BE03B3F6FA5288168DEC41 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C437138360295CE8C2C18D08 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				B782E1E9C58105C0E92D2C63 /* AppProgram.swift */,
+				AF8897B57B415DC3E84382D0 /* BarcodeNormalizer.swift */,
+				02A583A883BE3DFFC34D810C /* BinaryArchiveCodec.swift */,
+				77089BE5545A748496C253BA /* CalibrationCmd.swift */,
+				254E02A758B550DD2371E94C /* CatalogClient.swift */,
+				124BB041A273B2F0C0A40568 /* DayKey.swift */,
+				75C56BA181853E71C1522C34 /* DemoShelf.swift */,
+				9C3D43E39CF2A9CB5D2562BF /* DomainRecords.swift */,
+				D2D7D52A283146E48A858EFC /* LedgerDisk.swift */,
+				90E34A25F6549704B18536DC /* LiveScanSession.swift */,
+				EB5E6F5CE5F306D3D4C61730 /* MassConvert.swift */,
+				49771485B335494B1AC71ED7 /* PortionMath.swift */,
+				4D44937BC6BE677C231AEC8D /* WeighRuntime.swift */,
+				4B99FFB9F3791CD12F8C2335 /* WeighSlot.swift */,
+			);
+			path = Runtime;
+			sourceTree = "<group>";
+		};
+		CD82121473B471C677A351E7 /* Programs */ = {
+			isa = PBXGroup;
+			children = (
+				886B5469A12620B9B2728B1E /* Catalog */,
+				5BA0E796D5573ED16DAFBB96 /* Hub */,
+				60FBFF03B36D8CC351B268BD /* Log */,
+				90AE33CF16B45FD719319781 /* Onboarding */,
+				E5B50BE9444248BC49C4B6DE /* Plan */,
+				8F0DC68D31BEEE4220437A2B /* Scale */,
+				41A2AFA399A49773C04E50AE /* Targets */,
+				2DD3B5B00D7494F1E4C36426 /* Wish */,
+			);
+			path = Programs;
+			sourceTree = "<group>";
+		};
+		E5B50BE9444248BC49C4B6DE /* Plan */ = {
+			isa = PBXGroup;
+			children = (
+				BF876E2040B761D7072BB718 /* PlanModel.swift */,
+				4D6A66E49742097CAAAD21F3 /* PlanMsg.swift */,
+				A143952742754F7A8E786D82 /* PlanUpdate.swift */,
+				B61AE559C918BC62FD383C72 /* PlanView.swift */,
+			);
+			path = Plan;
+			sourceTree = "<group>";
+		};
+		F37426F3298C39B5E2C6359C /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				6D50A03EBD1C56CE76BBEA30 /* ScaleShaders.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		F86167A6C6A0F163A008E5DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A0CBCE715575C2D8ACBACC03 /* GramMeter.app */,
+				9CBDB9B0797B920E62B488E4 /* GramMeterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D14087A12C6F5605DB0D5AF3 /* GramMeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0226DAC86E5154B17315592 /* Build configuration list for PBXNativeTarget "GramMeter" */;
+			buildPhases = (
+				508D118A7310DCEA1BAD9C35 /* Sources */,
+				56571AB79EBC3474E7027E90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GramMeter;
+			packageProductDependencies = (
+			);
+			productName = GramMeter;
+			productReference = A0CBCE715575C2D8ACBACC03 /* GramMeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F49E1127DFB915EAE20F52B6 /* GramMeterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2403416FBA40C498B22C755 /* Build configuration list for PBXNativeTarget "GramMeterTests" */;
+			buildPhases = (
+				EB87CC05D864F6DC527FC112 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B66FB956F3F94B9A437A15A /* PBXTargetDependency */,
+			);
+			name = GramMeterTests;
+			packageProductDependencies = (
+			);
+			productName = GramMeterTests;
+			productReference = 9CBDB9B0797B920E62B488E4 /* GramMeterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2E06DC0A3B5D22A29B484C8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					D14087A12C6F5605DB0D5AF3 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 9BD3AB3AA44EEE4A4D37BA7E /* Build configuration list for PBXProject "GramMeter" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 75E7E0C40047EEE772DE8392;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F86167A6C6A0F163A008E5DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D14087A12C6F5605DB0D5AF3 /* GramMeter */,
+				F49E1127DFB915EAE20F52B6 /* GramMeterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56571AB79EBC3474E7027E90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BEE9D96DF06F82566F1021C /* Assets.xcassets in Resources */,
+				BB0F1162392099D540F4D88A /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		508D118A7310DCEA1BAD9C35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				889430DE756F970B83CC2721 /* AppProgram.swift in Sources */,
+				7BF51DF672E93970D87668BE /* BarcodeNormalizer.swift in Sources */,
+				BC7C0F5CDC5381A82D3E0401 /* BinaryArchiveCodec.swift in Sources */,
+				95F87795FB1F4FDFE831388D /* CalibrationCmd.swift in Sources */,
+				7B6BE0C451D08FBB27CB9771 /* CatalogClient.swift in Sources */,
+				3AE1C8B83EB9D79158E7C662 /* CatalogModel.swift in Sources */,
+				EBA12B474395A18FC6013046 /* CatalogMsg.swift in Sources */,
+				B11259A96C69C205FBA2662F /* CatalogUpdate.swift in Sources */,
+				7AE125801417CCAB451FC9C8 /* CatalogView.swift in Sources */,
+				8A59497F380216B20AA3EDFA /* DayKey.swift in Sources */,
+				B6989FC4241F142EB4CE37A6 /* DemoShelf.swift in Sources */,
+				74FD39526327FE69AC784DF3 /* DomainRecords.swift in Sources */,
+				25DCF221E190D8DFF5B56858 /* GaugeMotion.swift in Sources */,
+				99A7CE6A253E6C7345E88B9F /* GaugePalette.swift in Sources */,
+				0DC6B26BAB50DD1E13729100 /* GaugeType.swift in Sources */,
+				A8A61C372D19FEE5BE54B7F7 /* GramMeterApp.swift in Sources */,
+				80A86AF692EC0410B9BD86FC /* HubModel.swift in Sources */,
+				F9306F1D09B1BE42006EE00F /* HubMsg.swift in Sources */,
+				314687FFC14B4A3ACC35FD4E /* HubUpdate.swift in Sources */,
+				FB0E77D521CBBF0423891185 /* HubView.swift in Sources */,
+				7014E74A993F86EFD6FC7A67 /* LedgerDisk.swift in Sources */,
+				9D7B3098A36DCE0F064C663A /* LiveScanSession.swift in Sources */,
+				9ED01D6679886CB2682C1B8B /* LogModel.swift in Sources */,
+				E59C2F8FD46565AB3FF6954D /* LogMsg.swift in Sources */,
+				A1DCB6B270FE753D4F259895 /* LogUpdate.swift in Sources */,
+				73D913B35C0F71C220BA7432 /* LogView.swift in Sources */,
+				8EC72FE0771A8BCCEACEB3F3 /* MassConvert.swift in Sources */,
+				3600F572C1C508BF6F61B461 /* OnboardingModel.swift in Sources */,
+				B3A012F7EC73A6CC4F6DDD21 /* OnboardingMsg.swift in Sources */,
+				BFB98F8A3DE0CBFCE6425BF4 /* OnboardingUpdate.swift in Sources */,
+				C79FDA6715099645D13FB5AE /* OnboardingView.swift in Sources */,
+				69DE361F11341FE827D04A60 /* PlanModel.swift in Sources */,
+				E979E3347C9AB956CABD943A /* PlanMsg.swift in Sources */,
+				69B5FEBD3D7592A4567E8A54 /* PlanUpdate.swift in Sources */,
+				F270264711DE9515747F5B1C /* PlanView.swift in Sources */,
+				A56A863491BDA8C90962AB57 /* PortionMath.swift in Sources */,
+				79B953BD8D7777D4413EF192 /* ReadoutView.swift in Sources */,
+				23849F985897E77DC0729679 /* ScaleModel.swift in Sources */,
+				E4F779FEFBDCE8FD945FE469 /* ScaleMsg.swift in Sources */,
+				5C466590C34BAC826D558693 /* ScaleShaders.metal in Sources */,
+				00922AE84E707384F7187443 /* ScaleUpdate.swift in Sources */,
+				7B4C1B3377E542B667950B84 /* ScaleView.swift in Sources */,
+				4C2F89DFEFC23427C222773D /* TargetsModel.swift in Sources */,
+				B70937B02BFBA81F5E3449BC /* TargetsMsg.swift in Sources */,
+				447C3768AC1B4DC61311F20D /* TargetsUpdate.swift in Sources */,
+				65F821B2F6D05E5D9773DC06 /* TargetsView.swift in Sources */,
+				7BF7A711398DFAC832110323 /* WeighRuntime.swift in Sources */,
+				74354B7E7D4E390AC47DCB7B /* WeighSlot.swift in Sources */,
+				3117F5855DEF83D4DD4125D2 /* WishModel.swift in Sources */,
+				56CD717CBF7E4D24849B907B /* WishMsg.swift in Sources */,
+				945CAA1E616E13B248CAD79C /* WishUpdate.swift in Sources */,
+				42BFCD56F6FE5228CCC156D3 /* WishView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB87CC05D864F6DC527FC112 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A07FDF723E2B1C63B995BEF4 /* GramMeterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B66FB956F3F94B9A437A15A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D14087A12C6F5605DB0D5AF3 /* GramMeter */;
+			targetProxy = 9A3994AB9ADE75CD289BA8F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		33874251C3F766ABF20E203E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GramMeter.app/GramMeter";
+			};
+			name = Release;
+		};
+		40278F03B17733EDD4709E44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GramMeter;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "GramMeter reads barcodes so the scale knows what it is weighing.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_UIColorName = gmt_background;
+				INFOPLIST_KEY_UILaunchScreen_UIImageName = gmt_Splash;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale;
+				PRODUCT_NAME = GramMeter;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9AF5FBAB8008149D8FDE0AE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9ECB4DA1F622FDEFA8D3ADC9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		DD172CE1DAF6530E2F4307AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GramMeter.app/GramMeter";
+			};
+			name = Debug;
+		};
+		FDF5258ACA7052D0318A244D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = GramMeter;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "GramMeter reads barcodes so the scale knows what it is weighing.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_UIColorName = gmt_background;
+				INFOPLIST_KEY_UILaunchScreen_UIImageName = gmt_Splash;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale;
+				PRODUCT_NAME = GramMeter;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9BD3AB3AA44EEE4A4D37BA7E /* Build configuration list for PBXProject "GramMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9ECB4DA1F622FDEFA8D3ADC9 /* Debug */,
+				9AF5FBAB8008149D8FDE0AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D0226DAC86E5154B17315592 /* Build configuration list for PBXNativeTarget "GramMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDF5258ACA7052D0318A244D /* Debug */,
+				40278F03B17733EDD4709E44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F2403416FBA40C498B22C755 /* Build configuration list for PBXNativeTarget "GramMeterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD172CE1DAF6530E2F4307AE /* Debug */,
+				33874251C3F766ABF20E203E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2E06DC0A3B5D22A29B484C8 /* Project object */;
+}
