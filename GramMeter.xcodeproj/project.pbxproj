@@ -14,10 +14,12 @@
 		3117F5855DEF83D4DD4125D2 /* WishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EC748720D5A9AF8A60CC8 /* WishModel.swift */; };
 		314687FFC14B4A3ACC35FD4E /* HubUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B183A63D02F67905EF574 /* HubUpdate.swift */; };
 		3600F572C1C508BF6F61B461 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679299970D40FAD370F86376 /* OnboardingModel.swift */; };
+		376F9C26B64F55C9A6A5A929 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 71BE05E4F8EF26CC180CB988 /* Alamofire */; };
 		3AE1C8B83EB9D79158E7C662 /* CatalogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F44272800157FEEF125FD0 /* CatalogModel.swift */; };
 		42BFCD56F6FE5228CCC156D3 /* WishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9FF19B956F2DE1B405E4B1 /* WishView.swift */; };
 		447C3768AC1B4DC61311F20D /* TargetsUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F5DD611F5384CFB183C0BB /* TargetsUpdate.swift */; };
 		4C2F89DFEFC23427C222773D /* TargetsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8A5E315603F5FBEE003E3F /* TargetsModel.swift */; };
+		4D68DFEED232672C50C007FA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA362697C61B71EDA235FE7 /* AppDelegate.swift */; };
 		56CD717CBF7E4D24849B907B /* WishMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F0D5068F3FBF8FE3BC13A /* WishMsg.swift */; };
 		5BEE9D96DF06F82566F1021C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35A0931F8D77C640B1053457 /* Assets.xcassets */; };
 		5C466590C34BAC826D558693 /* ScaleShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 6D50A03EBD1C56CE76BBEA30 /* ScaleShaders.metal */; };
@@ -29,6 +31,7 @@
 		74354B7E7D4E390AC47DCB7B /* WeighSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B99FFB9F3791CD12F8C2335 /* WeighSlot.swift */; };
 		74FD39526327FE69AC784DF3 /* DomainRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3D43E39CF2A9CB5D2562BF /* DomainRecords.swift */; };
 		79B953BD8D7777D4413EF192 /* ReadoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF99CC78D42DABAF7635B94 /* ReadoutView.swift */; };
+		7A6374117BF4AEB276A7E2AF /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FC5895DBAC8BF527C2361C /* ScreenshotTests.swift */; };
 		7AE125801417CCAB451FC9C8 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C260BA4AB27A7B5F0D0ADE97 /* CatalogView.swift */; };
 		7B4C1B3377E542B667950B84 /* ScaleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4B7CCC90926AFEF314D617 /* ScaleView.swift */; };
 		7B6BE0C451D08FBB27CB9771 /* CatalogClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254E02A758B550DD2371E94C /* CatalogClient.swift */; };
@@ -45,7 +48,9 @@
 		9ED01D6679886CB2682C1B8B /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21102DA5C5C33BB00281B4C2 /* LogModel.swift */; };
 		A07FDF723E2B1C63B995BEF4 /* GramMeterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ED7BF3B6FD4D24658035B7 /* GramMeterTests.swift */; };
 		A1DCB6B270FE753D4F259895 /* LogUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63033F472320C2BCD07C63D /* LogUpdate.swift */; };
+		A4629F585E482A14211EE8DF /* ContactWebSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = C868247153279C77E7763016 /* ContactWebSheet.swift */; };
 		A56A863491BDA8C90962AB57 /* PortionMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49771485B335494B1AC71ED7 /* PortionMath.swift */; };
+		A6283AC730C44BBC1FE95661 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3232F75C569CC2D7DC4ACD /* APIConfig.swift */; };
 		A8A61C372D19FEE5BE54B7F7 /* GramMeterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85446A6C5D7ED59885D72724 /* GramMeterApp.swift */; };
 		B11259A96C69C205FBA2662F /* CatalogUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB784F503907017F485E308 /* CatalogUpdate.swift */; };
 		B3A012F7EC73A6CC4F6DDD21 /* OnboardingMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8420AD2315C327BFFA11FB9B /* OnboardingMsg.swift */; };
@@ -65,6 +70,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2FB46FA1C276DE630C2AD101 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2E06DC0A3B5D22A29B484C8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D14087A12C6F5605DB0D5AF3;
+			remoteInfo = GramMeter;
+		};
 		9A3994AB9ADE75CD289BA8F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A2E06DC0A3B5D22A29B484C8 /* Project object */;
@@ -78,13 +90,14 @@
 		02A583A883BE3DFFC34D810C /* BinaryArchiveCodec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryArchiveCodec.swift; sourceTree = "<group>"; };
 		049F0D5068F3FBF8FE3BC13A /* WishMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishMsg.swift; sourceTree = "<group>"; };
 		0866875D96FA7F51F44FA689 /* LogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogView.swift; sourceTree = "<group>"; };
+		11B64DF15D68555EAE6D9E49 /* GramMeterUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GramMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124BB041A273B2F0C0A40568 /* DayKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayKey.swift; sourceTree = "<group>"; };
 		1BA1AE4FD1BFCA2168C74176 /* GaugeMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeMotion.swift; sourceTree = "<group>"; };
 		1D821E3A9C3676C3C5380CAC /* WishUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishUpdate.swift; sourceTree = "<group>"; };
 		1FE160784B749B89BDD294B3 /* TargetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsView.swift; sourceTree = "<group>"; };
 		21102DA5C5C33BB00281B4C2 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
 		254E02A758B550DD2371E94C /* CatalogClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogClient.swift; sourceTree = "<group>"; };
-		2A7AC32C8F9096B96C725D3E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		2A7AC32C8F9096B96C725D3E /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		2A9CE8E68B50B84E840B6688 /* ScaleUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleUpdate.swift; sourceTree = "<group>"; };
 		2D4440B8DE7C98F3E1CEED41 /* LogMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMsg.swift; sourceTree = "<group>"; };
 		35A0931F8D77C640B1053457 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -97,7 +110,9 @@
 		4D1EC748720D5A9AF8A60CC8 /* WishModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishModel.swift; sourceTree = "<group>"; };
 		4D44937BC6BE677C231AEC8D /* WeighRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeighRuntime.swift; sourceTree = "<group>"; };
 		4D6A66E49742097CAAAD21F3 /* PlanMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanMsg.swift; sourceTree = "<group>"; };
+		5A3232F75C569CC2D7DC4ACD /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		679299970D40FAD370F86376 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		6BA362697C61B71EDA235FE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D50A03EBD1C56CE76BBEA30 /* ScaleShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ScaleShaders.metal; sourceTree = "<group>"; };
 		6EB784F503907017F485E308 /* CatalogUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogUpdate.swift; sourceTree = "<group>"; };
 		7537D65FFE21AE00BD7C50FC /* GaugePalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugePalette.swift; sourceTree = "<group>"; };
@@ -109,10 +124,11 @@
 		85446A6C5D7ED59885D72724 /* GramMeterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramMeterApp.swift; sourceTree = "<group>"; };
 		8C8D921BDE838A6FBE480B63 /* OnboardingUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUpdate.swift; sourceTree = "<group>"; };
 		90E34A25F6549704B18536DC /* LiveScanSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveScanSession.swift; sourceTree = "<group>"; };
+		99FC5895DBAC8BF527C2361C /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
 		9A0BCAABF698125638A2FCFC /* HubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubModel.swift; sourceTree = "<group>"; };
 		9C3D43E39CF2A9CB5D2562BF /* DomainRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainRecords.swift; sourceTree = "<group>"; };
 		9CBDB9B0797B920E62B488E4 /* GramMeterTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GramMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0CBCE715575C2D8ACBACC03 /* GramMeter.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = GramMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CBCE715575C2D8ACBACC03 /* GramMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GramMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A143952742754F7A8E786D82 /* PlanUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanUpdate.swift; sourceTree = "<group>"; };
 		AEAF80E5B800401C02FC429D /* HubMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HubMsg.swift; sourceTree = "<group>"; };
 		AF8897B57B415DC3E84382D0 /* BarcodeNormalizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeNormalizer.swift; sourceTree = "<group>"; };
@@ -121,6 +137,7 @@
 		B89461EFB8A75ACD0D7A6151 /* ScaleMsg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaleMsg.swift; sourceTree = "<group>"; };
 		BF876E2040B761D7072BB718 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
 		C260BA4AB27A7B5F0D0ADE97 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		C868247153279C77E7763016 /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
 		D0ED7BF3B6FD4D24658035B7 /* GramMeterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GramMeterTests.swift; sourceTree = "<group>"; };
 		D2D7D52A283146E48A858EFC /* LedgerDisk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedgerDisk.swift; sourceTree = "<group>"; };
 		D64A48C6DF3E1D052BF902B7 /* GaugeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeType.swift; sourceTree = "<group>"; };
@@ -133,6 +150,17 @@
 		F63033F472320C2BCD07C63D /* LogUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogUpdate.swift; sourceTree = "<group>"; };
 		FE9FF19B956F2DE1B405E4B1 /* WishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93D5CD3DB5F29E5E9A4C2578 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F9C26B64F55C9A6A5A929 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0008EEE839B68B54738093C3 /* Design */ = {
@@ -148,7 +176,10 @@
 		19DEAFB84298653E7799276B /* GramMeter */ = {
 			isa = PBXGroup;
 			children = (
+				5A3232F75C569CC2D7DC4ACD /* APIConfig.swift */,
+				6BA362697C61B71EDA235FE7 /* AppDelegate.swift */,
 				35A0931F8D77C640B1053457 /* Assets.xcassets */,
+				C868247153279C77E7763016 /* ContactWebSheet.swift */,
 				85446A6C5D7ED59885D72724 /* GramMeterApp.swift */,
 				2A7AC32C8F9096B96C725D3E /* PrivacyInfo.xcprivacy */,
 				0008EEE839B68B54738093C3 /* Design */,
@@ -208,6 +239,7 @@
 			children = (
 				19DEAFB84298653E7799276B /* GramMeter */,
 				8986E6B253D80F79BC34C3CB /* GramMeterTests */,
+				FB47DB35FAAEC3BC7B6CAFCA /* GramMeterUITests */,
 				F86167A6C6A0F163A008E5DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -314,19 +346,47 @@
 			children = (
 				A0CBCE715575C2D8ACBACC03 /* GramMeter.app */,
 				9CBDB9B0797B920E62B488E4 /* GramMeterTests.xctest */,
+				11B64DF15D68555EAE6D9E49 /* GramMeterUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FB47DB35FAAEC3BC7B6CAFCA /* GramMeterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				99FC5895DBAC8BF527C2361C /* ScreenshotTests.swift */,
+			);
+			path = GramMeterUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7129BD58DCAA316DB5C3B247 /* GramMeterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE59F434107BC580C51BABCA /* Build configuration list for PBXNativeTarget "GramMeterUITests" */;
+			buildPhases = (
+				304C3B7F97F90B1C1558592A /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39518B6FCFE68556A4D6C099 /* PBXTargetDependency */,
+			);
+			name = GramMeterUITests;
+			packageProductDependencies = (
+			);
+			productName = GramMeterUITests;
+			productReference = 11B64DF15D68555EAE6D9E49 /* GramMeterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		D14087A12C6F5605DB0D5AF3 /* GramMeter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0226DAC86E5154B17315592 /* Build configuration list for PBXNativeTarget "GramMeter" */;
 			buildPhases = (
 				508D118A7310DCEA1BAD9C35 /* Sources */,
 				56571AB79EBC3474E7027E90 /* Resources */,
+				93D5CD3DB5F29E5E9A4C2578 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -334,6 +394,7 @@
 			);
 			name = GramMeter;
 			packageProductDependencies = (
+				71BE05E4F8EF26CC180CB988 /* Alamofire */,
 			);
 			productName = GramMeter;
 			productReference = A0CBCE715575C2D8ACBACC03 /* GramMeter.app */;
@@ -366,6 +427,9 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					7129BD58DCAA316DB5C3B247 = {
+						TestTargetID = D14087A12C6F5605DB0D5AF3;
+					};
 					D14087A12C6F5605DB0D5AF3 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Manual;
@@ -381,6 +445,9 @@
 			);
 			mainGroup = 75E7E0C40047EEE772DE8392;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6BD18B039C58D4BFA65F7D92 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = F86167A6C6A0F163A008E5DD /* Products */;
 			projectDirPath = "";
@@ -388,6 +455,7 @@
 			targets = (
 				D14087A12C6F5605DB0D5AF3 /* GramMeter */,
 				F49E1127DFB915EAE20F52B6 /* GramMeterTests */,
+				7129BD58DCAA316DB5C3B247 /* GramMeterUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -405,10 +473,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		304C3B7F97F90B1C1558592A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A6374117BF4AEB276A7E2AF /* ScreenshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		508D118A7310DCEA1BAD9C35 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6283AC730C44BBC1FE95661 /* APIConfig.swift in Sources */,
+				4D68DFEED232672C50C007FA /* AppDelegate.swift in Sources */,
 				889430DE756F970B83CC2721 /* AppProgram.swift in Sources */,
 				7BF51DF672E93970D87668BE /* BarcodeNormalizer.swift in Sources */,
 				BC7C0F5CDC5381A82D3E0401 /* BinaryArchiveCodec.swift in Sources */,
@@ -418,6 +496,7 @@
 				EBA12B474395A18FC6013046 /* CatalogMsg.swift in Sources */,
 				B11259A96C69C205FBA2662F /* CatalogUpdate.swift in Sources */,
 				7AE125801417CCAB451FC9C8 /* CatalogView.swift in Sources */,
+				A4629F585E482A14211EE8DF /* ContactWebSheet.swift in Sources */,
 				8A59497F380216B20AA3EDFA /* DayKey.swift in Sources */,
 				B6989FC4241F142EB4CE37A6 /* DemoShelf.swift in Sources */,
 				74FD39526327FE69AC784DF3 /* DomainRecords.swift in Sources */,
@@ -480,9 +559,34 @@
 			target = D14087A12C6F5605DB0D5AF3 /* GramMeter */;
 			targetProxy = 9A3994AB9ADE75CD289BA8F1 /* PBXContainerItemProxy */;
 		};
+		39518B6FCFE68556A4D6C099 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D14087A12C6F5605DB0D5AF3 /* GramMeter */;
+			targetProxy = 2FB46FA1C276DE630C2AD101 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		05C24EF5227D9C414F04EFF5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GramMeter;
+			};
+			name = Debug;
+		};
 		33874251C3F766ABF20E203E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -526,9 +630,9 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_UIColorName = gmt_background;
 				INFOPLIST_KEY_UILaunchScreen_UIImageName = gmt_Splash;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -540,7 +644,27 @@
 				SDKROOT = iphoneos;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7E2B1DB833D2FB573F5074B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GramMeter;
 			};
 			name = Release;
 		};
@@ -601,7 +725,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -669,7 +793,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -716,9 +840,9 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchScreen_UIColorName = gmt_background;
 				INFOPLIST_KEY_UILaunchScreen_UIImageName = gmt_Splash;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -730,7 +854,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -742,6 +866,15 @@
 			buildConfigurations = (
 				9ECB4DA1F622FDEFA8D3ADC9 /* Debug */,
 				9AF5FBAB8008149D8FDE0AE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BE59F434107BC580C51BABCA /* Build configuration list for PBXNativeTarget "GramMeterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05C24EF5227D9C414F04EFF5 /* Debug */,
+				7E2B1DB833D2FB573F5074B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -765,6 +898,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6BD18B039C58D4BFA65F7D92 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
+			requirement = {
+				kind = revision;
+				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		71BE05E4F8EF26CC180CB988 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6BD18B039C58D4BFA65F7D92 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A2E06DC0A3B5D22A29B484C8 /* Project object */;
 }
