@@ -7,10 +7,7 @@ struct WishView: View {
         let wishes = runtime.model.archive.wishes
         VStack(spacing: 0) {
             HStack {
-                GaugeBackButton { runtime.send(.wish(.returnToHub)) }
-                Text("Reserved")
-                    .font(GaugeType.headline)
-                    .foregroundStyle(GaugePalette.ink)
+                GaugeBackButton(title: "Reserved") { runtime.send(.wish(.returnToHub)) }
                 Spacer()
             }
             .padding(GaugeSpace.n(2))
@@ -40,14 +37,18 @@ struct WishView: View {
                             }
                             Spacer()
                             Button("Weigh") { runtime.send(.wish(.promote(wish.barcode))) }
+                                .buttonStyle(.borderless)
                                 .frame(minHeight: GaugeSpace.tap)
+                                .contentShape(Rectangle())
                                 .accessibilityLabel("Promote to scale")
                             Button {
                                 runtime.send(.wish(.askDelete(wish.barcode)))
                             } label: {
                                 Image(systemName: "xmark")
                                     .frame(width: GaugeSpace.tap, height: GaugeSpace.tap)
+                                    .contentShape(Rectangle())
                             }
+                            .buttonStyle(.borderless)
                             .accessibilityLabel("Remove reserved specimen")
                         }
                         .listRowBackground(GaugePalette.surface)
@@ -57,14 +58,12 @@ struct WishView: View {
                 .scrollContentBackground(.hidden)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(GaugePalette.background.ignoresSafeArea())
-        .confirmationDialog(
-            "Remove this reserved specimen?",
-            isPresented: Binding(
-                get: { runtime.model.wish.pendingDelete != nil },
-                set: { if !$0 { runtime.send(.wish(.cancelDelete)) } }
-            )
-        ) {
+        .alert("Remove this reserved specimen?", isPresented: Binding(
+            get: { runtime.model.wish.pendingDelete != nil },
+            set: { if !$0 { runtime.send(.wish(.cancelDelete)) } }
+        )) {
             Button("Remove", role: .destructive) {
                 if let barcode = runtime.model.wish.pendingDelete {
                     runtime.send(.wish(.deleteConfirmed(barcode)))

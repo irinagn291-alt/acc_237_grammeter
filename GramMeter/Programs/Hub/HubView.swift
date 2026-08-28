@@ -138,6 +138,7 @@ struct HubView: View {
             .padding(GaugeSpace.n(2))
             .background(GaugePalette.surface)
             .frame(minHeight: GaugeSpace.tap)
+            .contentShape(Rectangle())
         }
         .accessibilityLabel("Open precision weigh")
     }
@@ -171,6 +172,7 @@ struct HubView: View {
                     .frame(minHeight: GaugeSpace.tap)
                     .padding(GaugeSpace.n(1))
                     .background(GaugePalette.surface)
+                    .contentShape(Rectangle())
                 }
                 .accessibilityLabel(item.1)
             }
@@ -209,6 +211,7 @@ struct HubView: View {
                     .padding(GaugeSpace.n(1.5))
                     .background(rows.contains(where: { $0.id == highlight }) ? GaugePalette.accent.opacity(0.12) : GaugePalette.surface)
                     .frame(minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
                 }
                 .accessibilityLabel("\(slot.label), \(rows.count) items")
             }

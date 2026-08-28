@@ -8,16 +8,14 @@ struct LogView: View {
         let rows = runtime.model.archive.eaten(on: model.day)
         VStack(spacing: 0) {
             HStack {
-                GaugeBackButton { runtime.send(.log(.returnToHub)) }
-                Text("Log")
-                    .font(GaugeType.headline)
-                    .foregroundStyle(GaugePalette.ink)
+                GaugeBackButton(title: "Log") { runtime.send(.log(.returnToHub)) }
                 Spacer()
             }
             .padding(.horizontal, GaugeSpace.n(2))
             HStack {
                 Button("Previous day") { runtime.send(.log(.shiftDay(-1))) }
                     .frame(minWidth: GaugeSpace.tap, minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Previous day")
                 Spacer()
                 Text(model.day.date(), style: .date)
@@ -26,6 +24,7 @@ struct LogView: View {
                 Spacer()
                 Button("Next day") { runtime.send(.log(.shiftDay(1))) }
                     .frame(minWidth: GaugeSpace.tap, minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Next day")
             }
             .padding(GaugeSpace.n(2))
@@ -68,15 +67,12 @@ struct LogView: View {
                 .scrollContentBackground(.hidden)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(GaugePalette.background.ignoresSafeArea())
-        .confirmationDialog(
-            "Delete this weigh-in?",
-            isPresented: Binding(
-                get: { model.pendingDelete != nil },
-                set: { if !$0 { runtime.send(.log(.cancelDelete)) } }
-            ),
-            titleVisibility: .visible
-        ) {
+        .alert("Delete this weigh-in?", isPresented: Binding(
+            get: { model.pendingDelete != nil },
+            set: { if !$0 { runtime.send(.log(.cancelDelete)) } }
+        )) {
             Button("Delete", role: .destructive) {
                 if let id = model.pendingDelete {
                     runtime.send(.log(.deleteConfirmed(id)))
@@ -107,7 +103,9 @@ struct LogView: View {
                 Image(systemName: "xmark")
                     .foregroundStyle(GaugePalette.ink)
                     .frame(width: GaugeSpace.tap, height: GaugeSpace.tap)
+                    .contentShape(Rectangle())
             }
+            .buttonStyle(.borderless)
             .accessibilityLabel("Delete weigh-in")
         }
         .frame(minHeight: GaugeSpace.tap)

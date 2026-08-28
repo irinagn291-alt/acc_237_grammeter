@@ -8,10 +8,7 @@ struct PlanView: View {
         let rows = runtime.model.archive.planned(from: model.today.adding(days: 1), through: model.horizonEnd)
         VStack(spacing: 0) {
             HStack {
-                GaugeBackButton { runtime.send(.plan(.returnToHub)) }
-                Text("Plan")
-                    .font(GaugeType.headline)
-                    .foregroundStyle(GaugePalette.ink)
+                GaugeBackButton(title: "Plan") { runtime.send(.plan(.returnToHub)) }
                 Spacer()
             }
             .padding(GaugeSpace.n(2))
@@ -26,49 +23,21 @@ struct PlanView: View {
                     actionTitle: "Back to hub",
                     action: { runtime.send(.plan(.returnToHub)) }
                 )
-                Spacer()
             } else {
                 List {
                     ForEach(rows) { record in
-                        HStack {
-                            SpecimenThumb(specimen: runtime.model.archive.specimen(for: record.barcode))
-                            VStack(alignment: .leading) {
-                                Text(runtime.model.archive.specimen(for: record.barcode)?.name ?? record.barcode)
-                                    .font(GaugeType.body)
-                                    .foregroundStyle(GaugePalette.ink)
-                                    .lineLimit(1)
-                                Text("\(record.slot.label) · \(record.day.date(), style: .date)")
-                                    .font(GaugeType.caption)
-                                    .foregroundStyle(GaugePalette.muted)
-                                    .lineLimit(1)
-                            }
-                            Spacer()
-                            Button("Eat") { runtime.send(.plan(.eat(record.id))) }
-                                .frame(minHeight: GaugeSpace.tap)
-                                .accessibilityLabel("Convert to eaten")
-                            Button {
-                                runtime.send(.plan(.askDelete(record.id)))
-                            } label: {
-                                Image(systemName: "xmark")
-                                    .frame(width: GaugeSpace.tap, height: GaugeSpace.tap)
-                            }
-                            .accessibilityLabel("Delete planned weigh-in")
-                        }
-                        .listRowBackground(GaugePalette.surface)
+                        planRow(record)
+                            .listRowBackground(GaugePalette.surface)
+                            .listRowInsets(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
                     }
                 }
                 .listStyle(.plain)
                 .scrollContentBackground(.hidden)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(GaugePalette.background.ignoresSafeArea())
-        .confirmationDialog(
-            "Delete this planned weigh-in?",
-            isPresented: Binding(
-                get: { model.pendingDelete != nil },
-                set: { if !$0 { runtime.send(.plan(.cancelDelete)) } }
-            )
-        ) {
+        .alert("Delete this planned weigh-in?", isPresented: deletePresented) {
             Button("Delete", role: .destructive) {
                 if let id = model.pendingDelete {
                     runtime.send(.plan(.deleteConfirmed(id)))
@@ -76,5 +45,49 @@ struct PlanView: View {
             }
             Button("Cancel", role: .cancel) { runtime.send(.plan(.cancelDelete)) }
         }
+    }
+
+    private var deletePresented: Binding<Bool> {
+        Binding(
+            get: { runtime.model.plan.pendingDelete != nil },
+            set: { if !$0 { runtime.send(.plan(.cancelDelete)) } }
+        )
+    }
+
+    private func planRow(_ record: WeighRecord) -> some View {
+        let specimen = runtime.model.archive.specimen(for: record.barcode)
+        return VStack(alignment: .leading, spacing: GaugeSpace.n(1)) {
+            Button {
+                runtime.send(.plan(.open(record.id)))
+            } label: {
+                HStack {
+                    SpecimenThumb(specimen: specimen)
+                    VStack(alignment: .leading) {
+                        Text(specimen?.name ?? record.barcode)
+                            .font(GaugeType.body)
+                            .foregroundStyle(GaugePalette.ink)
+                            .lineLimit(1)
+                        Text("\(record.slot.label) · \(record.day.date(), style: .date)")
+                            .font(GaugeType.caption)
+                            .foregroundStyle(GaugePalette.muted)
+                            .lineLimit(1)
+                    }
+                    Spacer(minLength: 0)
+                }
+                .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap, alignment: .leading)
+                .contentShape(Rectangle())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel(specimen?.name ?? record.barcode)
+            HStack {
+                Button("Eat today") { runtime.send(.plan(.eat(record.id))) }
+                    .buttonStyle(GaugeChipButtonStyle(expand: true))
+                    .accessibilityLabel("Convert to eaten")
+                Button("Delete") { runtime.send(.plan(.askDelete(record.id))) }
+                    .buttonStyle(GaugeChipButtonStyle(expand: true))
+                    .accessibilityLabel("Delete planned weigh-in")
+            }
+        }
+        .padding(.vertical, 4)
     }
 }

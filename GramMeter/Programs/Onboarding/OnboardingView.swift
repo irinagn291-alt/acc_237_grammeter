@@ -39,10 +39,12 @@ struct OnboardingView: View {
                 if model.page > 0 {
                     Button("Back") { runtime.send(.onboarding(.back)) }
                         .frame(minHeight: GaugeSpace.tap)
+                        .contentShape(Rectangle())
                 }
                 Spacer()
                 Button("Skip") { runtime.send(.onboarding(.skip)) }
                     .frame(minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Skip and use default targets")
             }
             .padding(.horizontal, GaugeSpace.n(2))

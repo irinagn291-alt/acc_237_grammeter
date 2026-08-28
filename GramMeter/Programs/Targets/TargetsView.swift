@@ -3,16 +3,14 @@ import SwiftUI
 struct TargetsView: View {
     @ObservedObject var runtime: WeighRuntime
     @FocusState private var field: Int?
+    @State private var showContact = false
 
     var body: some View {
         let model = runtime.model.targets
         ScrollView {
             VStack(alignment: .leading, spacing: GaugeSpace.n(2)) {
                 HStack {
-                    GaugeBackButton { runtime.send(.targets(.returnToHub)) }
-                    Text("Targets")
-                        .font(GaugeType.headline)
-                        .foregroundStyle(GaugePalette.ink)
+                    GaugeBackButton(title: "Targets") { runtime.send(.targets(.returnToHub)) }
                     Spacer()
                 }
                 if model.invalid {
@@ -28,11 +26,14 @@ struct TargetsView: View {
                     .buttonStyle(GaugeButtonStyle())
                 Button("Re-run onboarding") { runtime.send(.targets(.rerunOnboarding)) }
                     .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
                 Button("Reset all data") { runtime.send(.targets(.askReset)) }
                     .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
                     .foregroundStyle(GaugePalette.ink)
-                Button("Contact") { runtime.send(.targets(.openContact)) }
+                    .contentShape(Rectangle())
+                Button("Contact") { showContact = true }
                     .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Open contact page")
                 Text("Nutrition data comes from Open Food Facts, a public database. GramMeter is a personal food log, not medical advice.")
                     .font(GaugeType.footnote)
@@ -41,6 +42,9 @@ struct TargetsView: View {
             .padding(GaugeSpace.n(2))
         }
         .background(GaugePalette.background.ignoresSafeArea())
+        .sheet(isPresented: $showContact) {
+            ContactWebSheet()
+        }
         .scrollDismissesKeyboard(.interactively)
         .confirmationDialog(
             "Reset every weigh-in, reserve and cached specimen?",

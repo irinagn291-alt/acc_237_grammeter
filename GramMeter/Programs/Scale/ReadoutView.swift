@@ -15,15 +15,16 @@ struct ReadoutView: View {
                     .foregroundStyle(GaugePalette.ink)
                     .minimumScaleFactor(0.5)
                     .lineLimit(1)
+                    .frame(maxWidth: .infinity)
                     .colorEffect(ShaderLibrary.readoutGlow(.float(time), .float(reduceMotion ? 0 : 1)))
                     .accessibilityLabel("Net mass \(grams.map(GaugeFormat.mass) ?? "unknown") \(unit.label)")
                 Text(unit.label)
                     .font(GaugeType.headline)
-                    .foregroundStyle(GaugePalette.muted)
+                    .foregroundStyle(GaugePalette.ink)
                 needle(time: time)
             }
-            .frame(maxWidth: .infinity)
-            .padding(GaugeSpace.n(2))
+            .frame(maxWidth: .infinity, minHeight: 140)
+            .padding(GaugeSpace.n(3))
             .background {
                 Rectangle()
                     .fill(GaugePalette.surface)
@@ -87,6 +88,7 @@ struct EmptyGaugeState: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 160, height: 160)
+                .clipped()
                 .accessibilityHidden(true)
             Text(title)
                 .font(GaugeType.headline)
@@ -99,8 +101,8 @@ struct EmptyGaugeState: View {
             Button(actionTitle, action: action)
                 .buttonStyle(GaugeButtonStyle())
         }
-        .frame(maxWidth: .infinity)
         .padding(GaugeSpace.n(3))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
@@ -111,23 +113,51 @@ struct GaugeButtonStyle: ButtonStyle {
         configuration.label
             .font(GaugeType.headline)
             .foregroundStyle(GaugePalette.surface)
-            .frame(minHeight: GaugeSpace.tap)
-            .frame(maxWidth: .infinity)
+            .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
             .background(destructive ? GaugePalette.ink : GaugePalette.accent)
+            .contentShape(Rectangle())
+            .opacity(configuration.isPressed ? 0.8 : 1)
+    }
+}
+
+struct GaugeChipButtonStyle: ButtonStyle {
+    var fill: Color = GaugePalette.surface
+    var ink: Color = GaugePalette.ink
+    var expand: Bool = false
+
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .font(GaugeType.headline)
+            .foregroundStyle(ink)
+            .padding(.horizontal, GaugeSpace.n(1.5))
+            .frame(minWidth: GaugeSpace.tap, maxWidth: expand ? .infinity : nil, minHeight: GaugeSpace.tap)
+            .background(fill)
+            .contentShape(Rectangle())
             .opacity(configuration.isPressed ? 0.8 : 1)
     }
 }
 
 struct GaugeBackButton: View {
+    var title: String = ""
     let action: () -> Void
 
     var body: some View {
         Button(action: action) {
-            Image(systemName: "chevron.left")
-                .font(GaugeType.headline)
-                .foregroundStyle(GaugePalette.ink)
-                .frame(width: GaugeSpace.tap, height: GaugeSpace.tap)
+            HStack(spacing: GaugeSpace.n(1)) {
+                Image(systemName: "chevron.left")
+                    .font(GaugeType.headline)
+                if !title.isEmpty {
+                    Text(title)
+                        .font(GaugeType.headline)
+                }
+            }
+            .foregroundStyle(GaugePalette.ink)
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .frame(minWidth: 88, minHeight: GaugeSpace.tap, alignment: .leading)
+            .contentShape(Rectangle())
         }
-        .accessibilityLabel("Back to hub")
+        .buttonStyle(.plain)
+        .accessibilityLabel(title.isEmpty ? "Back to hub" : "Back to hub, \(title)")
     }
 }

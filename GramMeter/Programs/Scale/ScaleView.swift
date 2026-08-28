@@ -13,10 +13,11 @@ struct ScaleView: View {
 
     var body: some View {
         let model = runtime.model.scale
-        ScrollViewReader { proxy in
+        VStack(alignment: .leading, spacing: 0) {
+            header
+            ScrollViewReader { proxy in
             ScrollView {
                 VStack(alignment: .leading, spacing: GaugeSpace.n(2)) {
-                    header
                     scanBlock
                     if model.showSpinner {
                         ProgressView("Resolving specimen")
@@ -34,6 +35,7 @@ struct ScaleView: View {
                         send(model.assignOpen ? .closeAssign : .openAssign)
                     }
                     .buttonStyle(GaugeButtonStyle())
+                    .contentShape(Rectangle())
                     .disabled(model.specimen == nil || model.commitBlocked)
                     if model.assignOpen {
                         assign
@@ -46,10 +48,10 @@ struct ScaleView: View {
                     withAnimation(GaugeMotion.curve) { proxy.scrollTo(newValue, anchor: .center) }
                 }
             }
+            }
         }
         .background(GaugePalette.background.ignoresSafeArea())
         .scrollDismissesKeyboard(.interactively)
-        .simultaneousGesture(TapGesture().onEnded { field = nil })
         .alert("Leave this weigh-in?", isPresented: Binding(
             get: { model.askDiscard },
             set: { if !$0 { send(.stay) } }
@@ -81,12 +83,12 @@ struct ScaleView: View {
 
     private var header: some View {
         HStack {
-            GaugeBackButton { send(.returnToHub) }
-            Text("Weigh")
-                .font(GaugeType.headline)
-                .foregroundStyle(GaugePalette.ink)
-            Spacer()
+            GaugeBackButton(title: "Weigh") { send(.returnToHub) }
+            Spacer(minLength: 0)
         }
+        .padding(.horizontal, GaugeSpace.n(1))
+        .padding(.top, 4)
+        .zIndex(1)
     }
 
     private var scanBlock: some View {
@@ -127,7 +129,7 @@ struct ScaleView: View {
             Button("Resolve code") { send(.resolveManual) }
                 .buttonStyle(GaugeButtonStyle())
                 .disabled(model.commitBlocked)
-            if !runtime.scanSession.hasDevice {
+            if !runtime.scanSession.hasDevice || model.permission == .denied || model.permission == .restricted {
                 sampleChips
             }
         }
@@ -147,6 +149,7 @@ struct ScaleView: View {
                     .foregroundStyle(GaugePalette.ink)
                 Button("Open Settings") { send(.openSettings) }
                     .frame(minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
             }
         } else if model.permission == .restricted {
             VStack(alignment: .leading, spacing: GaugeSpace.n(1)) {
@@ -155,6 +158,7 @@ struct ScaleView: View {
                     .foregroundStyle(GaugePalette.ink)
                 Button("Open Settings") { send(.openSettings) }
                     .frame(minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
             }
         }
     }
@@ -167,14 +171,11 @@ struct ScaleView: View {
                         send(.setManual(specimen.barcode))
                         send(.resolveManual)
                     }
-                    .font(GaugeType.footnote)
-                    .foregroundStyle(GaugePalette.ink)
-                    .padding(.horizontal, GaugeSpace.n(1.5))
-                    .frame(minHeight: GaugeSpace.tap)
-                    .background(GaugePalette.surface)
+                    .buttonStyle(GaugeChipButtonStyle())
                     .accessibilityLabel("Sample \(specimen.name)")
                 }
             }
+            .padding(.trailing, GaugeSpace.n(2))
         }
     }
 
@@ -182,7 +183,7 @@ struct ScaleView: View {
     private var resolveCopy: some View {
         switch runtime.model.scale.resolveState {
         case .idle:
-            Text("Point the reticle at a barcode, or enter one.")
+            Text("Point the reticle at a barcode or QR, or enter a code.")
                 .font(GaugeType.body)
                 .foregroundStyle(GaugePalette.muted)
         case .loading, .ready:
@@ -202,6 +203,7 @@ struct ScaleView: View {
                     .foregroundStyle(GaugePalette.ink)
                 Button("Retry") { send(.resolveManual) }
                     .frame(minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
             }
         case .malformed:
             VStack(alignment: .leading) {
@@ -210,6 +212,7 @@ struct ScaleView: View {
                     .foregroundStyle(GaugePalette.ink)
                 Button("Retry") { send(.resolveManual) }
                     .frame(minHeight: GaugeSpace.tap)
+                    .contentShape(Rectangle())
             }
         }
     }
@@ -241,7 +244,7 @@ struct ScaleView: View {
                     send(.addWish(Date()))
                 }
                 .disabled(wished)
-                .frame(minHeight: GaugeSpace.tap)
+                .buttonStyle(GaugeChipButtonStyle())
                 .accessibilityLabel(wished ? "Already reserved" : "Add to reserved list")
             }
             Spacer(minLength: 0)
@@ -260,11 +263,13 @@ struct ScaleView: View {
     private var unitRow: some View {
         HStack {
             ForEach(MassUnit.allCases) { unit in
+                let on = runtime.model.scale.unit == unit
                 Button(unit.label) { send(.setUnit(unit)) }
-                    .font(GaugeType.headline)
-                    .foregroundStyle(runtime.model.scale.unit == unit ? GaugePalette.surface : GaugePalette.ink)
-                    .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
-                    .background(runtime.model.scale.unit == unit ? GaugePalette.accent : GaugePalette.surface)
+                    .buttonStyle(GaugeChipButtonStyle(
+                        fill: on ? GaugePalette.accent : GaugePalette.surface,
+                        ink: on ? GaugePalette.surface : GaugePalette.ink,
+                        expand: true
+                    ))
                     .accessibilityLabel("Unit \(unit.label)")
             }
         }
@@ -331,10 +336,7 @@ struct ScaleView: View {
                         if let grams { send(.applyPreset(grams)) }
                     }
                     .disabled(grams == nil)
-                    .font(GaugeType.footnote)
-                    .foregroundStyle(GaugePalette.ink)
-                    .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
-                    .background(GaugePalette.surface)
+                    .buttonStyle(GaugeChipButtonStyle(expand: true))
                     .accessibilityLabel("\(kind.label) preset")
                 }
             }
@@ -346,6 +348,7 @@ struct ScaleView: View {
                         }
                         .font(GaugeType.caption)
                         .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
+                        .contentShape(Rectangle())
                     }
                 }
             }
@@ -382,6 +385,7 @@ struct ScaleView: View {
                     .padding(GaugeSpace.n(1))
                     .frame(minHeight: GaugeSpace.tap)
                     .background(GaugePalette.surface)
+                    .contentShape(Rectangle())
                 }
                 .disabled(!slot.canPlan && !model.eatenToday)
                 .accessibilityLabel(slot.label)
@@ -409,6 +413,7 @@ struct ScaleView: View {
                 send(.commit(now: Date(), id: UUID()))
             }
             .buttonStyle(GaugeButtonStyle())
+            .contentShape(Rectangle())
             .disabled(model.commitBlocked || model.specimen == nil)
         }
     }

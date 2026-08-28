@@ -60,27 +60,35 @@ enum DemoShelf {
         for specimen in specimens {
             next.upsert(specimen)
         }
-        let seeded: [(String, Double, WeighSlot)] = [
-            ("0722252100450", 60, .weighInOne),
-            ("0029000016613", 30, .tare),
-            ("8410054000129", 150, .weighInTwo),
-            ("0027815995026", 120, .weighInThree)
-        ]
-        for (barcode, grams, slot) in seeded {
+        if next.eaten(on: day).isEmpty {
+            let seeded: [(String, Double, WeighSlot)] = [
+                ("0722252100450", 60, .weighInOne),
+                ("0029000016613", 30, .tare),
+                ("8410054000129", 150, .weighInTwo),
+                ("0027815995026", 120, .weighInThree)
+            ]
+            for (barcode, grams, slot) in seeded {
+                next.records.append(
+                    WeighRecord(id: UUID(), barcode: barcode, grams: grams, slot: slot, day: day, isEaten: true)
+                )
+            }
+        }
+        if next.planned(from: day.adding(days: 1), through: day.adding(days: 14)).isEmpty {
             next.records.append(
-                WeighRecord(id: UUID(), barcode: barcode, grams: grams, slot: slot, day: day, isEaten: true)
+                WeighRecord(
+                    id: UUID(),
+                    barcode: "8076809513388",
+                    grams: 80,
+                    slot: .weighInTwo,
+                    day: day.adding(days: 1),
+                    isEaten: false
+                )
             )
         }
-        next.records.append(
-            WeighRecord(
-                id: UUID(),
-                barcode: "8076809513388",
-                grams: 80,
-                slot: .weighInTwo,
-                day: day.adding(days: 1),
-                isEaten: false
-            )
-        )
+        if next.wishes.isEmpty {
+            next.upsertWish("0033383401003", added: Date())
+            next.upsertWish("0027815995026", added: Date())
+        }
         return next
     }
 

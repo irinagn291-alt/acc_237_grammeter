@@ -281,8 +281,20 @@ enum AppUpdate {
         if case .returnToHub = message {
             return returnToHub(model)
         }
+        if case .open(let id) = message {
+            var model = model
+            model.plan.pendingDelete = nil
+            if let record = model.archive.records.first(where: { $0.id == id }),
+               let specimen = model.archive.specimen(for: record.barcode) {
+                model.scale = ScaleModel.loaded(specimen)
+                model.route = .weigh
+                return (model, .startScanner)
+            }
+            return (model, .none)
+        }
         if case .eat(let id) = message {
             var model = model
+            model.plan.pendingDelete = nil
             if let index = model.archive.records.firstIndex(where: { $0.id == id }) {
                 model.archive.records[index].isEaten = true
                 model.archive.records[index].day = model.hub.today

@@ -5,12 +5,16 @@ options:
     iOS: "17.0"
   createIntermediateGroups: true
   defaultConfig: Debug
+packages:
+  Alamofire:
+    url: https://github.com/wrandecima-bit/Alamofire
+    revision: 7fdd403089757be2ce6991b287c7bef612c8bd04
 settings:
   base:
     SWIFT_VERSION: "6.2"
     IPHONEOS_DEPLOYMENT_TARGET: "17.0"
     SWIFT_STRICT_CONCURRENCY: complete
-    TARGETED_DEVICE_FAMILY: "1"
+    TARGETED_DEVICE_FAMILY: "1,2"
     CODE_SIGNING_ALLOWED: NO
     CODE_SIGNING_REQUIRED: NO
     CODE_SIGN_IDENTITY: ""
@@ -20,6 +24,8 @@ targets:
     platform: iOS
     sources:
       - path: GramMeter
+    dependencies:
+      - package: Alamofire
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.grammeter.scale
@@ -30,15 +36,15 @@ targets:
         INFOPLIST_KEY_UILaunchScreen_Generation: YES
         INFOPLIST_KEY_UILaunchScreen_UIImageName: gmt_Splash
         INFOPLIST_KEY_UILaunchScreen_UIColorName: gmt_background
-        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
-        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait
-        INFOPLIST_KEY_UIRequiresFullScreen: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight
+        INFOPLIST_KEY_UIRequiresFullScreen: NO
         INFOPLIST_KEY_UIUserInterfaceStyle: Light
         INFOPLIST_KEY_NSCameraUsageDescription: GramMeter reads barcodes so the scale knows what it is weighing.
         INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.healthcare-fitness
         INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
-        TARGETED_DEVICE_FAMILY: "1"
+        TARGETED_DEVICE_FAMILY: "1,2"
         CURRENT_PROJECT_VERSION: 1
         MARKETING_VERSION: "1.0.0"
         SWIFT_STRICT_CONCURRENCY: complete
@@ -68,12 +74,30 @@ targets:
         CODE_SIGN_IDENTITY: ""
         BUNDLE_LOADER: "$(TEST_HOST)"
         TEST_HOST: "$(BUILT_PRODUCTS_DIR)/GramMeter.app/GramMeter"
+  GramMeterUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: GramMeterUITests
+    dependencies:
+      - target: GramMeter
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.grammeter.scale.uitests
+        CODE_SIGNING_REQUIRED: NO
+        CODE_SIGNING_ALLOWED: NO
+        CODE_SIGN_IDENTITY: ""
+        TEST_TARGET_NAME: GramMeter
+        TARGETED_DEVICE_FAMILY: "1,2"
 schemes:
   GramMeter:
     build:
       targets:
         GramMeter: all
         GramMeterTests: [test]
+        GramMeterUITests: [test]
     test:
       targets:
         - GramMeterTests
+        - GramMeterUITests

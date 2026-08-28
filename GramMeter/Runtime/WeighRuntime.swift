@@ -32,9 +32,7 @@ final class WeighRuntime: ObservableObject {
         let (archive, notice) = await disk.load()
         let runtime = WeighRuntime(archive: archive, notice: notice, today: DayKey(from: Date()), disk: disk)
         #if targetEnvironment(simulator)
-        if !UserDefaults.standard.bool(forKey: GaugeLinks.demoFlag) {
-            runtime.send(.hub(.seedDemo(day: DayKey(from: Date()))))
-        }
+        runtime.send(.hub(.seedDemo(day: DayKey(from: Date()))))
         #endif
         return runtime
     }

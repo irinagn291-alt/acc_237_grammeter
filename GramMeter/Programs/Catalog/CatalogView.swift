@@ -8,10 +8,7 @@ struct CatalogView: View {
         let model = runtime.model.catalog
         VStack(spacing: 0) {
             HStack {
-                GaugeBackButton { runtime.send(.catalog(.returnToHub)) }
-                Text("Catalog")
-                    .font(GaugeType.headline)
-                    .foregroundStyle(GaugePalette.ink)
+                GaugeBackButton(title: "Catalog") { runtime.send(.catalog(.returnToHub)) }
                 Spacer()
             }
             .padding(.horizontal, GaugeSpace.n(2))
@@ -27,6 +24,7 @@ struct CatalogView: View {
             .focused($searchFocused)
             content
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .background(GaugePalette.background.ignoresSafeArea())
         .scrollDismissesKeyboard(.interactively)
     }
@@ -41,54 +39,11 @@ struct CatalogView: View {
         } else {
             switch model.phase {
             case .idle:
-                EmptyGaugeState(
-                    image: "gmt_EmptySearch",
-                    title: "Weigh by name",
-                    detail: "Type a product. Shelf stock fills in if the network is quiet.",
-                    actionTitle: "Back to hub",
-                    action: { runtime.send(.catalog(.returnToHub)) }
-                )
+                specimenList(DemoShelf.specimens, note: "Local shelf — type to search the catalog")
             case .typing, .loading:
                 Color.clear.frame(maxWidth: .infinity, maxHeight: .infinity)
             case .results:
-                List {
-                    if model.usedShelf {
-                        Text("Showing shelf matches")
-                            .font(GaugeType.footnote)
-                            .foregroundStyle(GaugePalette.muted)
-                            .listRowBackground(GaugePalette.background)
-                    }
-                    ForEach(Array(model.hits.enumerated()), id: \.element.barcode) { index, specimen in
-                        Button {
-                            runtime.send(.catalog(.picked(specimen)))
-                        } label: {
-                            HStack(spacing: GaugeSpace.n(1.5)) {
-                                SpecimenThumb(specimen: specimen)
-                                VStack(alignment: .leading, spacing: GaugeSpace.n(0.5)) {
-                                    Text(specimen.name)
-                                        .font(GaugeType.body)
-                                        .foregroundStyle(GaugePalette.ink)
-                                        .lineLimit(1)
-                                    Text(specimen.brand)
-                                        .font(GaugeType.caption)
-                                        .foregroundStyle(GaugePalette.muted)
-                                        .lineLimit(1)
-                                }
-                                Spacer(minLength: GaugeSpace.n(1))
-                                Text("\(GaugeFormat.unknownMacro(specimen.kcalPer100g))")
-                                    .font(GaugeType.readout(.title3))
-                                    .foregroundStyle(GaugePalette.accent)
-                                    .lineLimit(1)
-                            }
-                            .frame(minHeight: GaugeSpace.tap)
-                        }
-                        .listRowBackground(GaugePalette.surface)
-                        .opacity(1)
-                        .animation(GaugeMotion.curve.delay(Double(min(index, 8)) * 0.04), value: model.hits.count)
-                    }
-                }
-                .listStyle(.plain)
-                .scrollContentBackground(.hidden)
+                specimenList(model.hits, note: model.usedShelf ? "Showing shelf matches" : nil)
             case .empty:
                 EmptyGaugeState(
                     image: "gmt_EmptySearch",
@@ -109,5 +64,46 @@ struct CatalogView: View {
                 }
             }
         }
+    }
+
+    private func specimenList(_ specimens: [MassSpecimen], note: String?) -> some View {
+        List {
+            if let note {
+                Text(note)
+                    .font(GaugeType.footnote)
+                    .foregroundStyle(GaugePalette.muted)
+                    .listRowBackground(GaugePalette.background)
+            }
+            ForEach(specimens) { specimen in
+                Button {
+                    runtime.send(.catalog(.picked(specimen)))
+                } label: {
+                    HStack(spacing: GaugeSpace.n(1.5)) {
+                        SpecimenThumb(specimen: specimen)
+                        VStack(alignment: .leading, spacing: GaugeSpace.n(0.5)) {
+                            Text(specimen.name)
+                                .font(GaugeType.body)
+                                .foregroundStyle(GaugePalette.ink)
+                                .lineLimit(1)
+                            Text(specimen.brand)
+                                .font(GaugeType.caption)
+                                .foregroundStyle(GaugePalette.muted)
+                                .lineLimit(1)
+                        }
+                        Spacer(minLength: GaugeSpace.n(1))
+                        Text("\(GaugeFormat.unknownMacro(specimen.kcalPer100g))")
+                            .font(GaugeType.readout(.title3))
+                            .foregroundStyle(GaugePalette.accent)
+                            .lineLimit(1)
+                    }
+                    .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap, alignment: .leading)
+                    .contentShape(Rectangle())
+                }
+                .buttonStyle(.plain)
+                .listRowBackground(GaugePalette.surface)
+            }
+        }
+        .listStyle(.plain)
+        .scrollContentBackground(.hidden)
     }
 }
