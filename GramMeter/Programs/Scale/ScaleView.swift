@@ -246,6 +246,7 @@ struct ScaleView: View {
                 .disabled(wished)
                 .buttonStyle(GaugeChipButtonStyle())
                 .accessibilityLabel(wished ? "Already reserved" : "Add to reserved list")
+                GaugeCiteMark()
             }
             Spacer(minLength: 0)
         }

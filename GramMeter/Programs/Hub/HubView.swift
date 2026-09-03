@@ -24,6 +24,7 @@ struct HubView: View {
                     .foregroundStyle(GaugePalette.muted)
                 energyBlock(energy: energy, target: model.archive.targets.kcal)
                 macroRow(protein: protein, carbs: carbs, fat: fat, targets: model.archive.targets)
+                GaugeCiteBoard()
                 twistCard
                 spokeGrid
                 slotList(eaten: eaten, archive: model.archive, highlight: model.hub.lastAddedID)

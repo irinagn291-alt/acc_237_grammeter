@@ -233,3 +233,15 @@ final class BinaryArchiveRoundTripTests: XCTestCase {
         XCTAssertNotNil(notice)
     }
 }
+
+final class GaugeCiteTests: XCTestCase {
+    func testStandardsAreHTTPSAndNamed() {
+        XCTAssertFalse(GaugeCite.standards.isEmpty)
+        for standard in GaugeCite.standards {
+            XCTAssertEqual(standard.url.scheme, "https")
+            XCTAssertFalse(standard.title.isEmpty)
+            XCTAssertFalse(standard.detail.isEmpty)
+        }
+        XCTAssertEqual(GaugeCite.openFoodFacts.url.host, "world.openfoodfacts.org")
+    }
+}

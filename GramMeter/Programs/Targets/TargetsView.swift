@@ -35,9 +35,7 @@ struct TargetsView: View {
                     .frame(maxWidth: .infinity, minHeight: GaugeSpace.tap)
                     .contentShape(Rectangle())
                     .accessibilityLabel("Open contact page")
-                Text("Nutrition data comes from Open Food Facts, a public database. GramMeter is a personal food log, not medical advice.")
-                    .font(GaugeType.footnote)
-                    .foregroundStyle(GaugePalette.muted)
+                GaugeCiteBoard()
             }
             .padding(GaugeSpace.n(2))
         }

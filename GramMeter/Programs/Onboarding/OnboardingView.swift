@@ -29,7 +29,7 @@ struct OnboardingView: View {
                 page(
                     image: "gmt_Onboarding3",
                     title: "Set the daily gauges",
-                    detail: "Energy, protein, carbs and fat. Skip writes a sensible factory set.",
+                    detail: "Energy, protein, carbs and fat. Skip writes a factory set cited on the next page.",
                     tag: 2
                 )
                 targetPage(model)
@@ -100,6 +100,7 @@ struct OnboardingView: View {
                 field("Protein g", text: model.proteinText, tag: 1)
                 field("Carbs g", text: model.carbsText, tag: 2)
                 field("Fat g", text: model.fatText, tag: 3)
+                GaugeCiteBoard()
             }
             .padding(GaugeSpace.n(2))
         }
