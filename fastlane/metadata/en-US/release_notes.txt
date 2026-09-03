@@ -1,9 +1,5 @@
-Version 1.0 is the first public release.
+Version 1.0.1 adds tappable Sources for factory gauges and catalog figures.
 
-• Onboarding pages: Weigh it properly, Catalog and live scan, Set the daily gauges, and Precision first
-• Today hub with energy and macro gauges, Precision weigh, Stations, and spokes for Weigh, Catalog, Log, Plan, Targets and Reserved
-• Weigh with live barcode scan, Manual barcode, tare-aware net mass in g, oz or ml, and Portion presets (Slice, Cup, Tbsp)
-• Assign weigh-in to Weigh-In One, Weigh-In Two, Weigh-In Three or Tare, as Eaten today or a Future day
-• Catalog search of Open Food Facts with a local shelf fallback
-• Log of eaten weigh-ins, Plan on a 14-day horizon, Reserved list, and editable Targets
-• Local archive for weigh-ins, caches and gauges
+• Sources on Today (under Energy / Protein / Carbs / Fat), Targets, and the last onboarding page
+• Citations: USDA Dietary Guidelines, NIH DRI/AMDR, Open Food Facts, FDA Nutrition Facts, WHO Healthy diet
+• Weigh links Open Food Facts next to each specimen

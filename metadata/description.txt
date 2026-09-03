@@ -10,5 +10,6 @@ GramMeter is a personal food log. Search the Catalog or drop a barcode onto the 
 • Reserved holds products you intend to buy. Reserve from Weigh; Weigh on a reserved row loads it on the scale
 • Targets edits Energy kcal, Protein g, Carbs g and Fat g. Skip on first launch writes factory gauges
 • Contact on Targets opens the support page
+• Sources on Today, Targets and the last onboarding page cite USDA Dietary Guidelines, NIH DRI/AMDR, Open Food Facts, FDA and WHO
 
 Resolved products are cached on the device. Nutrition data comes from Open Food Facts, a public database. GramMeter is a personal food log, not medical advice.

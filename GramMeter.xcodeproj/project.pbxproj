@@ -11,6 +11,7 @@
 		0DC6B26BAB50DD1E13729100 /* GaugeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64A48C6DF3E1D052BF902B7 /* GaugeType.swift */; };
 		23849F985897E77DC0729679 /* ScaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45500AAF5BEDD15F2512029B /* ScaleModel.swift */; };
 		25DCF221E190D8DFF5B56858 /* GaugeMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1AE4FD1BFCA2168C74176 /* GaugeMotion.swift */; };
+		D2B8F5E30C19406B7F25E913 /* GaugeCite.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1A7E4D29B083F5A6E14D802 /* GaugeCite.swift */; };
 		3117F5855DEF83D4DD4125D2 /* WishModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1EC748720D5A9AF8A60CC8 /* WishModel.swift */; };
 		314687FFC14B4A3ACC35FD4E /* HubUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831B183A63D02F67905EF574 /* HubUpdate.swift */; };
 		3600F572C1C508BF6F61B461 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 679299970D40FAD370F86376 /* OnboardingModel.swift */; };
@@ -93,6 +94,7 @@
 		11B64DF15D68555EAE6D9E49 /* GramMeterUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = GramMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		124BB041A273B2F0C0A40568 /* DayKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayKey.swift; sourceTree = "<group>"; };
 		1BA1AE4FD1BFCA2168C74176 /* GaugeMotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeMotion.swift; sourceTree = "<group>"; };
+		C1A7E4D29B083F5A6E14D802 /* GaugeCite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeCite.swift; sourceTree = "<group>"; };
 		1D821E3A9C3676C3C5380CAC /* WishUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishUpdate.swift; sourceTree = "<group>"; };
 		1FE160784B749B89BDD294B3 /* TargetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetsView.swift; sourceTree = "<group>"; };
 		21102DA5C5C33BB00281B4C2 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 		0008EEE839B68B54738093C3 /* Design */ = {
 			isa = PBXGroup;
 			children = (
+				C1A7E4D29B083F5A6E14D802 /* GaugeCite.swift */,
 				1BA1AE4FD1BFCA2168C74176 /* GaugeMotion.swift */,
 				7537D65FFE21AE00BD7C50FC /* GaugePalette.swift */,
 				D64A48C6DF3E1D052BF902B7 /* GaugeType.swift */,
@@ -500,6 +503,7 @@
 				8A59497F380216B20AA3EDFA /* DayKey.swift in Sources */,
 				B6989FC4241F142EB4CE37A6 /* DemoShelf.swift in Sources */,
 				74FD39526327FE69AC784DF3 /* DomainRecords.swift in Sources */,
+				D2B8F5E30C19406B7F25E913 /* GaugeCite.swift in Sources */,
 				25DCF221E190D8DFF5B56858 /* GaugeMotion.swift in Sources */,
 				99A7CE6A253E6C7345E88B9F /* GaugePalette.swift in Sources */,
 				0DC6B26BAB50DD1E13729100 /* GaugeType.swift in Sources */,
@@ -618,7 +622,7 @@
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -638,7 +642,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale;
 				PRODUCT_NAME = GramMeter;
 				SDKROOT = iphoneos;
@@ -828,7 +832,7 @@
 				CODE_SIGNING_REQUIRED = NO;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_TESTABILITY = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -848,7 +852,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.grammeter.scale;
 				PRODUCT_NAME = GramMeter;
 				SDKROOT = iphoneos;
